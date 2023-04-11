@@ -116,8 +116,13 @@ _G.packer_plugins = {
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
+<<<<<<< HEAD
     path = "/home/largis21/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+=======
+    path = "/home/largis21/.local/share/nvim/site/pack/packer/start/indentline",
+    url = "https://github.com/yggdroot/indentline"
+>>>>>>> 349553770dc7b99968a05a76cf65f3ee20e58f05
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -143,6 +148,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/largis21/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/home/largis21/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -199,6 +210,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+<<<<<<< HEAD
+=======
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+>>>>>>> 349553770dc7b99968a05a76cf65f3ee20e58f05
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
