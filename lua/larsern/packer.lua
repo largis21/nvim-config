@@ -20,11 +20,7 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-<<<<<<< HEAD
     use { "doums/darcula", as = "darcula" }
-=======
-    use { 'doums/darcula', as = 'darcula' }
->>>>>>> 349553770dc7b99968a05a76cf65f3ee20e58f05
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('mbbill/undotree')
