@@ -28,3 +28,5 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undotree"
 vim.opt.undofile = true
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.opt.ignorecase = true
