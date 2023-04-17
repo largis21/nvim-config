@@ -30,4 +30,5 @@ vim.keymap.set("n", "gg", "gg0")
 vim.keymap.set("n", "<C-a>", "gg0vG$")
 vim.keymap.set("n", "G", "G$")
 
-
+vim.keymap.set("", "<leader>ts4", ":set tabstop=4 | :set softtabstop=4 | :set shiftwidth=4<CR>")
+vim.keymap.set("", "<leader>ts2", ":set tabstop=2 | :set softtabstop=2 | :set shiftwidth=2<CR>")
