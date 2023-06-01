@@ -2,7 +2,11 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
+    use 'nvim-tree/nvim-web-devicons'
+
     use 'wbthomason/packer.nvim'
+
+    use { "xiyaowong/transparent.nvim" }
 
     use({
       "iamcco/markdown-preview.nvim",

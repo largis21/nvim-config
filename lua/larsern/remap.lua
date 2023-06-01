@@ -35,3 +35,7 @@ vim.keymap.set("n", "<leader>ts2", ":set tabstop=2 | :set softtabstop=2 | :set s
 
 vim.keymap.set("n", "<C-l>", ":vertical res +5<CR>")
 vim.keymap.set("n", "<C-h>", ":vertical res -5<CR>")
+
+vim.keymap.set("n", "<leader>tt", ":TroubleToggle<CR>")
+
+
