@@ -26,7 +26,20 @@ return require('packer').startup(function(use)
 
     use { "doums/darcula", as = "darcula" }
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {
+		'nvim-treesitter/nvim-treesitter',
+		requires = {
+			{ 'JoosepAlviste/nvim-ts-context-commentstring' },
+		},
+		{run = ':TSUpdate'}
+	}
+
+    use { 'JoosepAlviste/nvim-ts-context-commentstring' } 
+
+    use {
+        'numToStr/Comment.nvim'
+    }
+
     use('mbbill/undotree')
     use('akinsho/toggleterm.nvim')
     use {
