@@ -12,10 +12,7 @@ return require('packer').startup(function(use)
       run = function() vim.fn["mkdp#util#install"]() end,
     })
 
-    use {
-      "windwp/nvim-autopairs",
-      config = function() require("nvim-autopairs").setup {} end
-    }
+    use "cohama/lexima.vim"
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',

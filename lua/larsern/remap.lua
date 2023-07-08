@@ -39,3 +39,4 @@ vim.keymap.set("n", "<C-h>", ":vertical res -5<CR>")
 vim.keymap.set("n", "<leader>tt", ":TroubleToggle<CR>")
 
 vim.keymap.set("n", "gD", ":lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set("n", "f", ":lua vim.lsp.buf.format()<CR>")
