@@ -32,3 +32,5 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.ignorecase = true
 
 require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
+
+vim.opt.list = true
