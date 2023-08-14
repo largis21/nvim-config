@@ -18,5 +18,11 @@ require'nvim-treesitter.configs'.setup {
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
+  },
+  autotag = {
+      enable = true,
+      enable_rename = true,
+      enable_close = true,
+      enable_close_on_slash = true,
   }
 }

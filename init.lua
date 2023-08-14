@@ -34,3 +34,4 @@ vim.opt.ignorecase = true
 require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
 
 vim.opt.list = true
+vim.opt.termguicolors = true

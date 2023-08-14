@@ -1,9 +1,11 @@
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
-    use 'nvim-tree/nvim-web-devicons'
+return require("packer").startup(function(use)
+    use "windwp/nvim-ts-autotag"
 
-    use 'wbthomason/packer.nvim'
+    use "nvim-tree/nvim-web-devicons"
+
+    use "wbthomason/packer.nvim"
 
     use { "xiyaowong/transparent.nvim" }
 
@@ -15,29 +17,38 @@ return require('packer').startup(function(use)
     use "cohama/lexima.vim"
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        "nvim-telescope/telescope.nvim", tag = "0.1.1",
+        -- or                            , branch = "0.1.x",
+        requires = { {"nvim-lua/plenary.nvim"} }
     }
 
+    use "lumiliet/vim-twig"
+    use "othree/html5.vim"
+
+    use {"barrett-ruth/import-cost.nvim", { run = "sh install.sh npm" }}
+
+--[[
+    colors 
+]]--
     use { "doums/darcula", as = "darcula" }
+    use { "ellisonleao/gruvbox.nvim", as = "gruvbox" }
+    use { "navarasu/onedark.nvim", as = "onedark" }
+    use { "brenoprata10/nvim-highlight-colors" }
 
     use {
-		'nvim-treesitter/nvim-treesitter',
+		"nvim-treesitter/nvim-treesitter",
 		requires = {
-			{ 'JoosepAlviste/nvim-ts-context-commentstring' },
+			{ "JoosepAlviste/nvim-ts-context-commentstring" },
 		},
-		{run = ':TSUpdate'}
+		{run = ":TSUpdate"}
 	}
 
-    use { 'JoosepAlviste/nvim-ts-context-commentstring' } 
+    use { "JoosepAlviste/nvim-ts-context-commentstring" }
 
-    use {
-        'numToStr/Comment.nvim'
-    }
+    use { "numToStr/Comment.nvim" }
 
-    use('mbbill/undotree')
-    use('akinsho/toggleterm.nvim')
+    use("mbbill/undotree")
+    use("akinsho/toggleterm.nvim")
     use {
         "folke/which-key.nvim",
         config = function()
@@ -48,30 +59,30 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+        "VonHeikemen/lsp-zero.nvim",
+        branch = "v1.x",
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            {"neovim/nvim-lspconfig"},             -- Required
+            {"williamboman/mason.nvim"},           -- Optional
+            {"williamboman/mason-lspconfig.nvim"}, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            {"hrsh7th/nvim-cmp"},         -- Required
+            {"hrsh7th/cmp-nvim-lsp"},     -- Required
+            {"hrsh7th/cmp-buffer"},       -- Optional
+            {"hrsh7th/cmp-path"},         -- Optional
+            {"saadparwaiz1/cmp_luasnip"}, -- Optional
+            {"hrsh7th/cmp-nvim-lua"},     -- Optional
 
             -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
+            {"L3MON4D3/LuaSnip"},             -- Required
         }
     }
 
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        "nvim-lualine/lualine.nvim",
+        requires = { "kyazdani42/nvim-web-devicons", opt = true }
     }
     
     use "lukas-reineke/indent-blankline.nvim"
