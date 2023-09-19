@@ -33,6 +33,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Real end or start of file
 vim.keymap.set("n", "gg", "gg0")
+
 -- Select all
 vim.keymap.set("n", "<C-a>", "gg0vG$")
 vim.keymap.set("n", "G", "G$")
@@ -50,3 +51,5 @@ vim.keymap.set("n", "gD", ":lua vim.lsp.buf.definition()<CR>")
 vim.keymap.set("n", "=", ":lua vim.lsp.buf.format()<CR>")
 vim.keymap.set("v", "=", ":lua vim.lsp.buf.format()<CR>")
 vim.keymap.set("n", "gl", ":lua vim.diagnostic.open_float()<CR>")
+
+vim.keymap.set("n", "<leader>rr", ":lua vim.lsp.buf.rename()<CR>")

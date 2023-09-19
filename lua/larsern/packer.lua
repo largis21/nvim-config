@@ -1,6 +1,30 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
+    use {
+      "kevinhwang91/nvim-ufo",
+      requires = {
+        "kevinhwang91/promise-async",
+        {
+          "luukvbaal/statuscol.nvim",
+          config = function()
+            local builtin = require("statuscol.builtin")
+            require("statuscol").setup(
+              {
+                relculright = true,
+                segments = {
+                  {text = {builtin.foldfunc}, click = "v:lua.ScFa"},
+                  {text = {"%s"}, click = "v:lua.ScSa"},
+                  {text = {builtin.lnumfunc, " "}, click = "v:lua.ScLa"}
+                }
+              }
+            )
+          end
+
+        }
+      }
+    }
+
     use "windwp/nvim-ts-autotag"
 
     use "nvim-tree/nvim-web-devicons"
@@ -25,7 +49,7 @@ return require("packer").startup(function(use)
     use "lumiliet/vim-twig"
     use "othree/html5.vim"
 
-    use {"barrett-ruth/import-cost.nvim", { run = "sh install.sh npm" }}
+    -- use {"barrett-ruth/import-cost.nvim", { run = "sh install.sh npm" }}
 
 --[[
     colors 
@@ -43,12 +67,19 @@ return require("packer").startup(function(use)
 		{run = ":TSUpdate"}
 	}
 
+    use("akinsho/toggleterm.nvim")
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
     use { "JoosepAlviste/nvim-ts-context-commentstring" }
 
     use { "numToStr/Comment.nvim" }
 
     use("mbbill/undotree")
-    use("akinsho/toggleterm.nvim")
+
     use {
         "folke/which-key.nvim",
         config = function()

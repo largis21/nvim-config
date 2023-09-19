@@ -1,4 +1,4 @@
-require("import-cost").setup({
+--[[ require("import-cost").setup({
     fileTypes = {
         "javascript",
         "javascriptreact",
@@ -10,4 +10,4 @@ require("import-cost").setup({
         kb_format = '%.1fk',
         virtual_text = '%s (gzipped: %s)',
     }
-})
+}) ]]
